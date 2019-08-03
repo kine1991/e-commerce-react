@@ -5,7 +5,6 @@ const selectShop = state => state.shop
 export const selectCollections = createSelector(
     [selectShop],
     (shop) => {
-        // console.log('reselect  ---   selectCollections')
         return shop.collections
     }
 )

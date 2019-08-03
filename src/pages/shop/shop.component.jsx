@@ -34,7 +34,7 @@ class ShopPage extends Component {
         textAlign: 'center',
         height: '500px'
       }}>
-        <Route exact path={`${match.path}`} render={(props) => <CollectionsOverviewWithSpinner isLoading={true} {...props} />} />
+        <Route exact path={`${match.path}`} render={(props) => <CollectionsOverviewWithSpinner isLoading={loading} {...props} />} />
         <Route path={`${match.path}/:collectionId`} render={(props) => <CollectionPageWithSpinner isLoading={loading} {...props} />} />
       </div>
     )
