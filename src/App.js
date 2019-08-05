@@ -31,7 +31,7 @@ class App extends React.Component {
         })
       }
       setCurrentUser(userAuth)
-    })
+    }, error => console.log(error))
   }
 
   componentWillUnmount(){
