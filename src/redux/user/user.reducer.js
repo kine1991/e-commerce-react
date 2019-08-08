@@ -1,34 +1,35 @@
-import { UserActionTypes } from './user.types'
+import UserActionTypes from './user.types'
 
 
 const INITIAL_STATE = {
-  currentUser: null
+  currentUser: null,
+  error: null,
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case UserActionTypes.SET_CURRENT_USER:
+    case UserActionTypes.SIGN_IN_SUCESS:
       return {
         ...state,
-        currentUser: action.payload
+        currentUser: action.payload,
+        error: null
       };
+    case UserActionTypes.SIGN_IN_FAILURE:
+    case UserActionTypes.SIGN_OUT_FAILUE:
+    case UserActionTypes.SIGN_UP_FAILUE:
+      return {
+        ...state,
+        error: action.payload
+      }
+    case UserActionTypes.SIGN_OUT_SUCCESS:
+      return{
+        ...state,
+        currentUser: null,
+        error: null
+      }
     default:
       return state;
   }
 };
 
 export default userReducer;
-
-
-//   function todoApp(state = initialState, action) {
-//     switch (action.type) {
-//       case SET_VISIBILITY_FILTER:
-//         return Object.assign({}, state, {
-//           visibilityFilter: action.filter
-//         })
-//       default:
-//         return state
-//     }
-//   }
-    
-    
