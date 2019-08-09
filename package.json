@@ -45,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/kine1991/e-commerce-react.git",
+  "author": "kine1991 <kine4599@gmail.com>",
+  "license": "MIT"
 }
