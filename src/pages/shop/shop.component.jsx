@@ -10,7 +10,6 @@ import CollectionsOverviewContainer from "../../components/collections-overview/
 const ShopPage = ({match, fetchCollectionsStart}) => {
   
   useEffect(() => {
-    console.log(33)
     fetchCollectionsStart()
   }, [fetchCollectionsStart])
 
