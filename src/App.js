@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from './components/navbar.component'
 import { Route, Switch, Redirect } from 'react-router-dom';
+import Register from './pages/register/register.component'
+import Login from './pages/login/login.component'
 // import { connect } from 'react-redux'
 // import { createStructuredSelector } from 'reselect'
 import './App.css';
@@ -16,6 +18,8 @@ const App = () => {
       <Switch>
         <Route exact path="/" render={() => <h1>Main</h1>} />
         <Route path="/about" render={() => <h1>About</h1>} />
+        <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
         {/* <Route 
           exact 
           path="/signin" 

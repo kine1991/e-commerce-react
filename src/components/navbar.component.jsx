@@ -47,13 +47,13 @@ const Navbar = () => {
             <Typography color='inherit'>App</Typography>
             <Typography variant="h6" className={classes.title}>Photos</Typography>
 
-            {!true && (
+            {!false && (
               <>
               <Link to="/login" className={classes.link}>Login</Link>
               <Link to="/register" className={classes.link}>Register</Link>
               </>
             )}
-            {true && (
+            {false && (
               <div>
                 <IconButton aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleMenu} color="inherit">
                   <AccountCircle />
